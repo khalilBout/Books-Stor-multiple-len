@@ -1,0 +1,54 @@
+{
+  "Welcome to React": "Welcome to React and react-i18next",
+  "navbar": {
+    "logo": "Books",
+    "home": "Home",
+    "bestSeller": "Best Seller",
+    "quickLinks": "Quick links",
+    "supervisors": "Supervisors",
+    "contact": "Contact",
+    "ourServices": "Our Services",
+    "order": "Order",
+    "leng": "Language"
+  },
+  "hero": {
+    "byAnonymous": "By Anonymous",
+    "orderNow": "Order Now"
+  },
+  "services": {
+    "trendingBooks": "Trending Books",
+    "bestBooks": "Best Books",
+    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis delectus architecto error nesciunt,",
+    "orderNow": "Order Now"
+  },
+  "banner": {
+    "title": "Library at your fingertips",
+    "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    "service-1": "Quality Books",
+    "service-2": "Fast Delivery",
+    "service-3": "Easy Payment method",
+    "service-4": "Get Offers on Books"
+  },
+  "appStore": {
+    "title": "Read Books at Your Fingertips"
+  },
+  "allBooks": {
+    "title-sm": "Top Books for you",
+    "title": "Top Books",
+    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit Perspiciatis delectus architecto error nesciunt",
+    "viewAllBooks": "View All Books"
+  },
+  "SliderSuper": {
+    "title-sm": "What our customers say",
+    "title": "Testimonial",
+    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit Perspiciatis delectus architecto error nesciunt"
+  },
+  "footer": {
+    "logo": " Books",
+    "desc": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit consectetur adipisicing elit. Possimus, voluptate.",
+    "locl": "Noida, Uttar Pradesh",
+    "importantLinks": "Important Links",
+    "links": "Links",
+    "location": "Location"
+  }
+}
