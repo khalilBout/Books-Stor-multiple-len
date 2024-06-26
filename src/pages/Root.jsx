@@ -32,17 +32,21 @@ i18n
   });
 
 export default function Root() {
-  const [orderPopup, setOrderPopup] = useState(false);
+  // const [orderPopup, setOrderPopup] = useState(false);
 
-  const handleOrderPopup = () => {
-    setOrderPopup(!orderPopup);
+  // const handleOrderPopup = () => {
+  //   setOrderPopup(!orderPopup);
+  // };
+  const changeDir = () => {
+    window.document.dir = i18n.dir();
   };
-
   return (
-    <>
-      <Navbar handleOrderPopup={handleOrderPopup} />
+    <div className="font-Title overflow-x-hidden">
+      <div className=" fixed top-0 left-0 right-0 z-50">
+        <Navbar changeDir={changeDir} />
+      </div>
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 }

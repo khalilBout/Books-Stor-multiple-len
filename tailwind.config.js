@@ -5,7 +5,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        // sans: ["Poppins", "sans-serif"],
+        Changa: ["Changa", "sans-serif"],
+        Title: ["Amiri", "sans-serif"],
+        body: ["Cairo", "sans-serif"],
+        Roboto: ["Roboto", "sans-serif"],
       },
       colors: {
         primary: "#1182c5",

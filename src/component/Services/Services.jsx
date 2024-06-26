@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import allBooks from "../../data/books";
@@ -6,22 +8,35 @@ import { FaStar } from "react-icons/fa";
 const Services = () => {
   const { t } = useTranslation();
   const dataBooks = allBooks?.slice(0, 3);
+  const servicesRef = useRef();
+  const isServicesRefInView = useInView(servicesRef, { margin: "-100px" });
 
   return (
-    <>
-      <span id="services"></span>
+    <section id="services" ref={servicesRef}>
       <div className="py-10 bg-white dark:bg-dark dark:text-white duration-200 ">
         <div className="container">
-          <div className="text-center mb-20 max-w-[400px] mx-auto">
+          <motion.div
+            initial={{ y: "-100px", opacity: 0 }}
+            // animate={{ y: "0", opacity: 1 }}
+            animate={isServicesRefInView ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-20 max-w-[400px] mx-auto"
+          >
             <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary ">
               {t("services.trendingBooks")}
             </p>
             <h1 className="text-3xl font-bold"> {t("services.bestBooks")}</h1>
             <p className="text-xs text-gray-400">{t("services.desc")}</p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
             {dataBooks?.map((service) => (
-              <div
+              <motion.div
+                initial={{ x: `-${service.id * 1000}px`, opacity: 0 }}
+                // animate={{ y: "0", opacity: 1 }}
+                animate={isServicesRefInView ? { x: 0, opacity: 1 } : {}}
+                transition={{
+                  duration: 0.7,
+                }}
                 key={service.id}
                 className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
               >
@@ -58,12 +73,12 @@ const Services = () => {
                     {t("services.orderNow")}
                   </button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
